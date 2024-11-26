@@ -18,9 +18,17 @@ typedef struct {
   node_t *nil;  // for sentinel
 } rbtree;
 
+////////////////////////////////////////
+void printTree(rbtree *t, node_t *node);
+////////////////////////////////////////
+
 rbtree *new_rbtree(void);
+void deleteHelper(rbtree *t, node_t *node);
 void delete_rbtree(rbtree *);
 
+void Right_Rotate(rbtree *t, node_t *x);
+void Left_Rotate(rbtree *t, node_t *x);
+void insert_fixup(rbtree *t, node_t *z);
 node_t *rbtree_insert(rbtree *, const key_t);
 node_t *rbtree_find(const rbtree *, const key_t);
 node_t *rbtree_min(const rbtree *);

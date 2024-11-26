@@ -10,9 +10,9 @@ rbtree *new_rbtree(void) {
   //RB-Tree nill노드는 모두 검정
   p->nil->color = RBTREE_BLACK;
   //nil노드 왼쪽 오른쪽 부모 초기화
-  // p->nil->parent = p->nil;
-  // p->nil->left = p->nil;
-  // p->nil->right = p->nil;
+  p->nil->parent = p->nil;
+  p->nil->left = p->nil;
+  p->nil->right = p->nil;
   //루트노드가 닐노드
   p->root = p->nil;
   return p;
